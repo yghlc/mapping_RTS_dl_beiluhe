@@ -1,0 +1,209 @@
+%% 
+%% Copyright 2007-2019 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+\usepackage{siunitx}  % for degree celsius
+\usepackage{multirow} % for the table
+\usepackage{booktabs} % fot toprule, midrule
+\usepackage{longtable}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Remote Sensing of Environment}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Mapping Retrogressive Thaw Slumps in the Beiluhe Region, Tibetan Plateau on Planet CubeSat images using Deep Learning}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \address[label1]{}
+%% \address[label2]{}
+
+\author{Lingcao Huang, Jing Luo, Zhanju Lin, Niu Fujun, Lin Liu}
+
+\address{hellloworld}
+
+\begin{abstract}
+%% Text of abstract
+
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
+\section{Results}
+\label{sec_res}
+
+Hello, where is my talbe?\citep{zhu_deep_2017}
+
+%\renewcommand{\arraystretch}{1.0}% Tighter
+% h: place the table here 
+\begin{table}[h]
+\footnotesize
+\caption{Accuracies of different data augmentation methods.}
+\label{table_acc_imgaug}
+%\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g. \tablesize{\footnotesize}. If commented out \small will be used.
+%\begin{tabular}{cc m{2.2cm}  m{2.2cm}  m{2.2cm} ccc}
+\begin{tabular}{c c c c  c ccc c c c c}
+\toprule
+\textbf{\#}&\textbf{Method}&\textbf{AP}&\textbf{Pos}&\textbf{Neg}&\textbf{IOU}&\textbf{TP}&\textbf{FP}&\textbf{FN}&\textbf{Pre}&\textbf{Rec}&\textbf{F1}\\
+%\midrule
+%1 & 1 & 16 & 17 & 0 & 0.48 & 1.00 & 0.65  \\
+\midrule
+\multirow{3}{*}{16} &  \multirow{3}{*}{F, B, C} & \multirow{3}{*}{0.536 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2401} &0.8 & 130 & 66 & 72 & 0.663  & 0.644  & 0.653 \\
+ &  & &  &   & 0.4 & 172 & 24 & 27 & 0.878  & 0.864  & 0.871 \\
+ &  & &  &   & 0.0 & 175 & 21 & 7 & 0.893  & 0.962  & 0.926 \\
+\midrule
+\multirow{3}{*}{4} &  \multirow{3}{*}{S} & \multirow{3}{*}{0.531 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1029} &0.8 & 120 & 78 & 82 & 0.606  & 0.594  & 0.600 \\
+ &  & &  &   & 0.4 & 171 & 27 & 29 & 0.864  & 0.855  & 0.859 \\
+ &  & &  &   & 0.0 & 171 & 27 & 4 & 0.864  & 0.977  & 0.917 \\
+\midrule
+\multirow{3}{*}{2} &  \multirow{3}{*}{F, B} & \multirow{3}{*}{0.523 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1715} &0.8 & 121 & 79 & 81 & 0.605  & 0.599  & 0.602 \\
+ &  & &  &   & 0.4 & 169 & 31 & 32 & 0.845  & 0.841  & 0.843 \\
+ &  & &  &   & 0.0 & 173 & 27 & 6 & 0.865  & 0.967  & 0.913 \\
+\midrule
+\multirow{3}{*}{13} &  \multirow{3}{*}{C, S} & \multirow{3}{*}{0.521 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1715} &0.8 & 131 & 76 & 71 & 0.633  & 0.649  & 0.641 \\
+ &  & &  &   & 0.4 & 175 & 32 & 25 & 0.845  & 0.875  & 0.860 \\
+ &  & &  &   & 0.0 & 176 & 31 & 5 & 0.850  & 0.972  & 0.907 \\
+\midrule
+\multirow{3}{*}{6} &  \multirow{3}{*}{F, R} & \multirow{3}{*}{0.519 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2058} &0.8 & 108 & 90 & 94 & 0.546  & 0.535  & 0.540 \\
+ &  & &  &   & 0.4 & 166 & 32 & 34 & 0.838  & 0.830  & 0.834 \\
+ &  & &  &   & 0.0 & 170 & 28 & 6 & 0.859  & 0.966  & 0.909 \\
+ 
+\hline
+\hline
+
+\multirow{3}{*}{24} &  \multirow{3}{*}{B, S, R} & \multirow{3}{*}{0.494 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2744} &0.8 & 111 & 77 & 91 & 0.590  & 0.550  & 0.569 \\
+ &  & &  &   & 0.4 & 161 & 27 & 39 & 0.856  & 0.805  & 0.830 \\
+ &  & &  &   & 0.0 & 164 & 24 & 15 & 0.872  & 0.916  & 0.894 \\
+\midrule
+\multirow{3}{*}{9} &  \multirow{3}{*}{B} & \multirow{3}{*}{0.493 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1029} &0.8 & 107 & 76 & 95 & 0.585  & 0.530  & 0.556 \\
+ &  & &  &   & 0.4 & 157 & 26 & 43 & 0.858  & 0.785  & 0.820 \\
+ &  & &  &   & 0.0 & 161 & 22 & 17 & 0.880  & 0.905  & 0.892 \\
+\midrule
+\multirow{3}{*}{23} &  \multirow{3}{*}{B, C, R} & \multirow{3}{*}{0.490 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2744} &0.8 & 112 & 76 & 90 & 0.596  & 0.555  & 0.574 \\
+ &  & &  &   & 0.4 & 163 & 25 & 37 & 0.867  & 0.815  & 0.840 \\
+ &  & &  &   & 0.0 & 165 & 23 & 17 & 0.878  & 0.907  & 0.892 \\
+\midrule
+\multirow{3}{*}{5} &  \multirow{3}{*}{R} & \multirow{3}{*}{0.485 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1372} &0.8 & 84 & 88 & 118 & 0.488  & 0.416  & 0.449 \\
+ &  & &  &   & 0.4 & 144 & 28 & 57 & 0.837  & 0.716  & 0.772 \\
+ &  & &  &   & 0.0 & 152 & 20 & 21 & 0.884  & 0.879  & 0.881 \\
+\midrule
+\multirow{3}{*}{20} &  \multirow{3}{*}{F, C, R} & \multirow{3}{*}{0.480 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2744} &0.8 & 95 & 80 & 107 & 0.543  & 0.470  & 0.504 \\
+ &  & &  &   & 0.4 & 153 & 22 & 46 & 0.874  & 0.769  & 0.818 \\
+ &  & &  &   & 0.0 & 155 & 20 & 22 & 0.886  & 0.876  & 0.881 \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+\section{References}
+\label{sec_reference}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+\bibliographystyle{elsarticle-harv} 
+\bibliography{03_mapping_RTS_dl_beiluhe.bib}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+%\begin{thebibliography}{00}
+%
+%%% \bibitem[Author(year)]{label}
+%%% Text of bibliographic item
+%
+%\bibitem[ ()]{}
+%\end{thebibliography}
+
+
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
