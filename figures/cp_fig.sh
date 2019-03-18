@@ -13,7 +13,7 @@ dir='/Users/huanglingcao/Dropbox/Research/Conference or written Paper/03 mapping
 
 #cp -p "${dir}"/top5_curves_trim.jpg .
 
-#cp -p "${dir}"/IoU_imgAug16_new_trim.jpg .
+#cp -p "${dir}"/IoU_imgAug16_label_trim.jpg .
 
 #cp -p "${dir}"/whole_area_mapped_trim.jpg .
 
