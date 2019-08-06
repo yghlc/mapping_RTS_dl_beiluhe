@@ -9,6 +9,8 @@ dir='/Users/huanglingcao/Dropbox/Research/Conference or written Paper/03 mapping
 
 #cp -p "${dir}"/study_area_loc_RTS_photo_trim.jpg .
 
+cp -p "${dir}"/study_area_loc_RTS_photo_v2_trim.jpg .
+
 #cp -p "${dir}"/flowchart_trim.jpg .
 
 #cp -p "${dir}"/top5_curves_trim.jpg .
@@ -21,4 +23,4 @@ dir='/Users/huanglingcao/Dropbox/Research/Conference or written Paper/03 mapping
 
 #cp -p "${dir}"/geometric_var_mapped_trim.jpg .
 
-cp -p "${dir}"/terrain_var_fig_mapped_trim.jpg .
+#cp -p "${dir}"/terrain_var_fig_mapped_trim.jpg .
