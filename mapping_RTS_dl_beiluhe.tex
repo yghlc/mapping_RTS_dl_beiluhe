@@ -277,7 +277,7 @@ The performance of each experiment, represented by precision-recall curves, vari
 % h or ht: place the table here 
 \begin{table}
 \scriptsize
-\caption{Selected experiments of data augmentations: without data augmentation (\#0), the top five (\#16, 4, 2, 13, and 6) and bottom five (\#24, 9, 23, 25, and 20) based on AP}
+\caption{Selected experiments of data augmentations: without data augmentation (\#0), the top five (\#22, 1, 30, 16, and 26) and bottom five (\#31, 5, 9, 29, and 14) based on AP}
 \label{table_acc_imgaug}
 %\centering
 %% \tablesize{} %% You can specify the fontsize here, e.g. \tablesize{\footnotesize}. If commented out \small will be used.
@@ -287,56 +287,58 @@ The performance of each experiment, represented by precision-recall curves, vari
 \textbf{\#}&\textbf{Augmentation Methods}&\textbf{AP}&\textbf{Neg}&\textbf{Pos}&\textbf{IOU}&\textbf{TP}&\textbf{FP}&\textbf{FN}&\textbf{Pre}&\textbf{Rec}&\textbf{F1} \\
 \midrule 
 
-\multirow{3}{*}{0} &  \multirow{3}{*}{} & \multirow{3}{*}{0.516} & \multirow{3}{*}{1268} & \multirow{3}{*}{343} &0.8 & 93	&89	&109&	0.511 &	0.460& 	0.484  \\ [-1ex]
- &  & &  &   & 0.4 & 161&	21	&40	&0.885 &	0.801 &	0.841  \\[-1ex]
- &  & &  &   & 0.0 & 165&	17	&13&	0.907 	&0.927 	&0.917  \\[-1ex]
+\multirow{3}{*}{0} &  \multirow{3}{*}{} & \multirow{3}{*}{0.527} & \multirow{3}{*}{1177} & \multirow{3}{*}{429} &0.8 & 166	&109	&97&	0.604  &	0.631 & 	0.617   \\ [-1ex]
+ &  & &  &   & 0.4 & 233&	42	&27	&0.847  &	0.896   &	0.871   \\[-1ex]
+ &  & &  &   & 0.0 & 234&	41	&2&	0.851  	&0.992  &0.916   \\[-1ex]
 
 \hline 
 \hline
 
-\multirow{3}{*}{16} &  \multirow{3}{*}{F, B, C} & \multirow{3}{*}{0.536 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2401} &0.8 & 130 & 66 & 72 & 0.663  & 0.644  & 0.653 \\ [-1ex]
- &  & &  &   & 0.4 & 172 & 24 & 27 & 0.878  & 0.864  & 0.871 \\ [-1ex]
- &  & &  &   & 0.0 & 175 & 21 & 7 & 0.893  & 0.962  & 0.926 \\ [-1ex]
+\multirow{3}{*}{22} &  \multirow{3}{*}{B, C, S} & \multirow{3}{*}{0.541} & \multirow{3}{*}{1177} & \multirow{3}{*}{3003} &0.8 & 161 & 94 & 102 & 0.631 & 0.612 & 0.622\\[-1ex]
+ &  & &  &   & 0.4 & 228 & 27 & 32 & 0.894 & 0.877 & 0.885\\[-1ex]
+ &  & &  &   & 0.0 & 229 & 26 & 6 & 0.898 & 0.975 & 0.935\\[-1ex]
 \midrule
-\multirow{3}{*}{4} &  \multirow{3}{*}{S} & \multirow{3}{*}{0.531 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1029} &0.8 & 120 & 78 & 82 & 0.606  & 0.594  & 0.600 \\ [-1ex]
- &  & &  &   & 0.4 & 171 & 27 & 29 & 0.864  & 0.855  & 0.859 \\ [-1ex]
- &  & &  &   & 0.0 & 171 & 27 & 4 & 0.864  & 0.977  & 0.917 \\ [-1ex]
+\multirow{3}{*}{1} &  \multirow{3}{*}{F} & \multirow{3}{*}{0.526} & \multirow{3}{*}{1177} & \multirow{3}{*}{1287} &0.8 & 142 & 121 & 121 & 0.540 & 0.540 & 0.540\\[-1ex]
+ &  & &  &   & 0.4 & 222 & 41 & 40 & 0.844 & 0.847 & 0.846\\[-1ex]
+ &  & &  &   & 0.0 & 227 & 36 & 3 & 0.863 & 0.987 & 0.921\\[-1ex]
 \midrule
-\multirow{3}{*}{2} &  \multirow{3}{*}{F, B} & \multirow{3}{*}{0.523 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1715} &0.8 & 121 & 79 & 81 & 0.605  & 0.599  & 0.602 \\ [-1ex]
- &  & &  &   & 0.4 & 169 & 31 & 32 & 0.845  & 0.841  & 0.843 \\ [-1ex]
- &  & &  &   & 0.0 & 173 & 27 & 6 & 0.865  & 0.967  & 0.913 \\ [-1ex]
+\multirow{3}{*}{30} &  \multirow{3}{*}{B, C, S, R} & \multirow{3}{*}{0.525} & \multirow{3}{*}{1177} & \multirow{3}{*}{4290} &0.8 & 138 & 118 & 125 & 0.539 & 0.525 & 0.532\\[-1ex]
+ &  & &  &   & 0.4 & 222 & 34 & 39 & 0.867 & 0.851 & 0.859\\[-1ex]
+ &  & &  &   & 0.0 & 227 & 29 & 6 & 0.887 & 0.974 & 0.928\\[-1ex]
 \midrule
-\multirow{3}{*}{13} &  \multirow{3}{*}{C, S} & \multirow{3}{*}{0.521 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1715} &0.8 & 131 & 76 & 71 & 0.633  & 0.649  & 0.641 \\ [-1ex]
- &  & &  &   & 0.4 & 175 & 32 & 25 & 0.845  & 0.875  & 0.860 \\ [-1ex]
- &  & &  &   & 0.0 & 176 & 31 & 5 & 0.850  & 0.972  & 0.907 \\ [-1ex]
+\multirow{3}{*}{16} &  \multirow{3}{*}{F, B, C} & \multirow{3}{*}{0.520} & \multirow{3}{*}{1177} & \multirow{3}{*}{3003} &0.8 & 167 & 104 & 96 & 0.616 & 0.635 & 0.626\\[-1ex]
+ &  & &  &   & 0.4 & 228 & 43 & 32 & 0.841 & 0.877 & 0.859\\[-1ex]
+ &  & &  &   & 0.0 & 229 & 42 & 3 & 0.845 & 0.987 & 0.911\\[-1ex]
 \midrule
-\multirow{3}{*}{6} &  \multirow{3}{*}{F, R} & \multirow{3}{*}{0.519 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2058} &0.8 & 108 & 90 & 94 & 0.546  & 0.535  & 0.540 \\ [-1ex]
- &  & &  &   & 0.4 & 166 & 32 & 34 & 0.838  & 0.830  & 0.834 \\ [-1ex]
- &  & &  &   & 0.0 & 170 & 28 & 6 & 0.859  & 0.966  & 0.909 \\ [-1ex]
+\multirow{3}{*}{26} &  \multirow{3}{*}{F, B, C, S} & \multirow{3}{*}{0.519} & \multirow{3}{*}{1177} & \multirow{3}{*}{3861} &0.8 & 169 & 101 & 94 & 0.626 & 0.643 & 0.634\\[-1ex]
+ &  & &  &   & 0.4 & 229 & 41 & 32 & 0.848 & 0.877 & 0.863\\[-1ex]
+ &  & &  &   & 0.0 & 229 & 41 & 5 & 0.848 & 0.979 & 0.909\\[-1ex]
+
+\hline 
+\hline
+
+
+\multirow{3}{*}{31} &  \multirow{3}{*}{F, B, C, S, R} & \multirow{3}{*}{0.483} & \multirow{3}{*}{1177} & \multirow{3}{*}{5148} &0.8 & 152 & 135 & 111 & 0.530 & 0.578 & 0.553\\[-1ex]
+ &  & &  &   & 0.4 & 228 & 59 & 30 & 0.794 & 0.884 & 0.837\\[-1ex]
+ &  & &  &   & 0.0 & 228 & 59 & 5 & 0.794 & 0.979 & 0.877\\[-1ex]
+\midrule
+\multirow{3}{*}{5} &  \multirow{3}{*}{R} & \multirow{3}{*}{0.478} & \multirow{3}{*}{1177} & \multirow{3}{*}{1716} &0.8 & 109 & 160 & 154 & 0.405 & 0.414 & 0.410\\[-1ex]
+ &  & &  &   & 0.4 & 217 & 52 & 44 & 0.807 & 0.831 & 0.819\\[-1ex]
+ &  & &  &   & 0.0 & 222 & 47 & 10 & 0.825 & 0.957 & 0.886\\[-1ex]
+\midrule
+\multirow{3}{*}{9} &  \multirow{3}{*}{F, R} & \multirow{3}{*}{0.476} & \multirow{3}{*}{1177} & \multirow{3}{*}{2574} &0.8 & 131 & 153 & 132 & 0.461 & 0.498 & 0.479\\[-1ex]
+ &  & &  &   & 0.4 & 219 & 65 & 43 & 0.771 & 0.836 & 0.802\\[-1ex]
+ &  & &  &   & 0.0 & 221 & 63 & 5 & 0.778 & 0.978 & 0.867\\[-1ex]
+\midrule
+\multirow{3}{*}{29} &  \multirow{3}{*}{F, C, S, R} & \multirow{3}{*}{0.475} & \multirow{3}{*}{1177} & \multirow{3}{*}{4290} &0.8 & 160 & 142 & 103 & 0.530 & 0.608 & 0.566\\[-1ex]
+ &  & &  &   & 0.4 & 226 & 76 & 36 & 0.748 & 0.863 & 0.801\\[-1ex]
+ &  & &  &   & 0.0 & 228 & 74 & 2 & 0.755 & 0.991 & 0.857\\[-1ex]
+\midrule
+\multirow{3}{*}{14} &  \multirow{3}{*}{C, R} & \multirow{3}{*}{0.456} & \multirow{3}{*}{1177} & \multirow{3}{*}{2574} &0.8 & 141 & 136 & 122 & 0.509 & 0.536 & 0.522\\[-1ex]
+ &  & &  &   & 0.4 & 218 & 59 & 43 & 0.787 & 0.835 & 0.810\\[-1ex]
+ &  & &  &   & 0.0 & 222 & 55 & 15 & 0.801 & 0.937 & 0.864\\[-1ex]
+
  
-\hline
-\hline
-
-\multirow{3}{*}{24} &  \multirow{3}{*}{B, S, R} & \multirow{3}{*}{0.494 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2744} &0.8 & 111 & 77 & 91 & 0.590  & 0.550  & 0.569 \\ [-1ex]
- &  & &  &   & 0.4 & 161 & 27 & 39 & 0.856  & 0.805  & 0.830 \\ [-1ex]
- &  & &  &   & 0.0 & 164 & 24 & 15 & 0.872  & 0.916  & 0.894 \\[-1ex]
-\midrule
-\multirow{3}{*}{9} &  \multirow{3}{*}{B} & \multirow{3}{*}{0.493 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1029} &0.8 & 107 & 76 & 95 & 0.585  & 0.530  & 0.556 \\[-1ex]
- &  & &  &   & 0.4 & 157 & 26 & 43 & 0.858  & 0.785  & 0.820 \\[-1ex]
- &  & &  &   & 0.0 & 161 & 22 & 17 & 0.880  & 0.905  & 0.892 \\[-1ex]
-\midrule
-\multirow{3}{*}{23} &  \multirow{3}{*}{B, C, R} & \multirow{3}{*}{0.490 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2744} &0.8 & 112 & 76 & 90 & 0.596  & 0.555  & 0.574 \\[-1ex]
- &  & &  &   & 0.4 & 163 & 25 & 37 & 0.867  & 0.815  & 0.840 \\[-1ex]
- &  & &  &   & 0.0 & 165 & 23 & 17 & 0.878  & 0.907  & 0.892 \\[-1ex]
-\midrule
-\multirow{3}{*}{5} &  \multirow{3}{*}{R} & \multirow{3}{*}{0.485 } & \multirow{3}{*}{1268} & \multirow{3}{*}{1372} &0.8 & 84 & 88 & 118 & 0.488  & 0.416  & 0.449 \\[-1ex]
- &  & &  &   & 0.4 & 144 & 28 & 57 & 0.837  & 0.716  & 0.772 \\[-1ex]
- &  & &  &   & 0.0 & 152 & 20 & 21 & 0.884  & 0.879  & 0.881 \\[-1ex]
-\midrule
-\multirow{3}{*}{20} &  \multirow{3}{*}{F, C, R} & \multirow{3}{*}{0.480 } & \multirow{3}{*}{1268} & \multirow{3}{*}{2744} &0.8 & 95 & 80 & 107 & 0.543  & 0.470  & 0.504 \\[-1ex]
- &  & &  &   & 0.4 & 153 & 22 & 46 & 0.874  & 0.769  & 0.818 \\[-1ex]
- &  & &  &   & 0.0 & 155 & 20 & 22 & 0.886  & 0.876  & 0.881 \\[-1ex]
-
 \bottomrule
 \end{tabular}
 %\vspace{1ex}
@@ -353,8 +355,8 @@ The performance of each experiment, represented by precision-recall curves, vari
 
 \begin{figure}
 	\centering
-	\includegraphics[width=8cm]{figures/IoU_imgAug16_label_trim.jpg}
-	\caption{IOU histogram of the mapped polygons in experiment \#16.}
+	\includegraphics[width=8cm]{figures/IoU_imgAug22_label_trim.jpg}
+	\caption{IOU histogram of the mapped polygons in experiment \#22.}
 	\label{fig_iou_hist_exp16}
 \end{figure}
 
@@ -411,25 +413,25 @@ When the IOU threshold is 0.8, there is a difference of F1 scores between experi
 \multirow{2}{*}{\textbf{IOU}}&\multirow{2}{*}{\textbf{Methods}}& \multicolumn{3}{c}{ \textbf{F1 score}} \\
  & &\textbf{min}&\textbf{max}&\textbf{mean}\\
 \midrule
-\multirow{5}{*}{0.8} &   F & 0.504 & 0.653 & 0.581 \\
-  & B & 0.512 & 0.653 & 0.591\\
- & C & 0.504 & 0.653 & 0.597\\
- & S & 0.547 & 0.641 & 0.590\\
-& R & 0.449 & 0.606 & 0.555 \\
+\multirow{5}{*}{0.8} & F &     0.479 & 0.634 & 0.575 \\
+&      B & 0.507 & 0.634 & 0.572 \\
+&      C & 0.522 & 0.634 & 0.582 \\
+&      S & 0.447 & 0.634 & 0.571 \\
+&      R & 0.410 & 0.586 & 0.530 \\
 
 \midrule
-\multirow{5}{*}{0.4} &  F & 0.818 & 0.871 & 0.842 \\
- &  B & 0.805 & 0.871 & 0.842\\
- & C & 0.818 & 0.871 & 0.849\\
- & S & 0.830 & 0.861 & 0.845\\
-& R & 0.772 & 0.861 & 0.834\\
+\multirow{5}{*}{0.4}&      F & 0.801 & 0.863 & 0.841 \\
+&      B & 0.826 & 0.885 & 0.847 \\
+&      C & 0.801 & 0.885 & 0.849 \\
+&      S & 0.801 & 0.885 & 0.844 \\
+&      R & 0.801 & 0.859 & 0.833 \\
 
 \midrule
-\multirow{5}{*}{0.0} & F & 0.881 & 0.926 & 0.901 \\
-  &B & 0.887 & 0.926 & 0.902\\
-  &C & 0.881 & 0.926 & 0.904\\
- &S & 0.887 & 0.917 & 0.901\\
-&R & 0.881 & 0.914 & 0.897\\
+\multirow{5}{*}{0.0} &     F & 0.857 & 0.921 & 0.895 \\
+&      B & 0.877 & 0.935 & 0.902 \\
+&      C & 0.857 & 0.935 & 0.900 \\
+&      S & 0.857 & 0.935 & 0.898 \\
+&      R & 0.857 & 0.928 & 0.890 \\
 
 %F: flipping, B: blurring, C:cropping, S:scaling, R: rotating
 
@@ -456,15 +458,15 @@ Table \ref{table_acc_otherbands} lists the accuracies of two experiments, which 
 \textbf{\#}&\textbf{Bands}&\textbf{AP}&\textbf{IOU}&\textbf{TP}&\textbf{FP}&\textbf{FN}&\textbf{Pre}&\textbf{Rec}&\textbf{F1}\\
 \midrule
 
-\multirow{3}{*}{32} &  \multirow{3}{3cm}{Blue, NDVI, NDWI} & \multirow{3}{*}{0.514}  &0.8&129&76&73&0.629 &0.639 &0.634   \\
- &  &  &0.4&175&30&25&0.854 &0.875 &0.864  \\
- &  &  &0.0&177&28&6&0.863 &0.967 &0.912   \\
+\multirow{3}{*}{32} &  \multirow{3}{3cm}{Blue, NDVI, NDWI} & \multirow{3}{*}{0.493}  &0.8&162   & 103   & 101   & 0.611  & 0.616  & 0.614   \\
+ &  &  &0.4&221   & 44    & 40    & 0.834  & 0.847  & 0.840 \\
+ &  &  &0.0&225   & 40    & 14    & 0.849  & 0.941  & 0.893   \\
  
 \midrule
 
-\multirow{3}{*}{33} &  \multirow{3}{3cm}{1--3 bands after PCA} & \multirow{3}{*}{0.472} &0.8&109&52&93&0.677 &0.540 &0.601  \\
- &  &  &0.4&146&15&53&0.907 &0.734 &0.811  \\
- &  & &0.0&147&14&32&0.913 &0.821 &0.865  \\
+\multirow{3}{*}{33} &  \multirow{3}{3cm}{1--3 bands after PCA} & \multirow{3}{*}{0.474} &0.8& 158   & 96    & 105   & 0.622  & 0.601  & 0.611  \\
+ &  &  &0.4& 209   & 45    & 52    & 0.823  & 0.801  & 0.812  \\
+ &  & &0.0& 217   & 37    & 23    & 0.854  & 0.904  & 0.879  \\
 
 \bottomrule
 \end{tabular}
@@ -500,7 +502,7 @@ The uncertainty of the training polygons, some of which are derived from ground 
 \begin{figure}
 	\centering
 	\includegraphics[width=14cm]{figures/geometric_var_mapped_trim.jpg}
-	\caption{Geometric statistics of the RTSs based on mapped RTSs of experiment \#16 in Table \ref{table_acc_imgaug}. One RTS whose area is 34.6 ha not shown in (a), and two RTSs, whose perimeters are 6924 meters and 8226 meters, respectively, are not shown in (b) because they are out of range. }
+	\caption{Geometric statistics of the RTSs based on mapped RTSs of experiment \#22 in Table \ref{table_acc_imgaug}. One RTS whose area is \replaced{35.2}{34.6} ha not shown in (a), and two RTSs, whose perimeters are \replaced{6972}{6924} meters and \replaced{8910}{8226} meters, respectively, are not shown in (b) because they are out of range. }
 	\label{fig_geometric_statistics}
 \end{figure}
 
@@ -517,7 +519,7 @@ The geometric characteristics of the mapped RTSs are similar to those \replaced{
 \begin{figure}
 	\centering
 	\includegraphics[width=13cm]{figures/terrain_var_fig_mapped_trim.jpg}
-	\caption{Statistics of RTS terrain factors based on automatic mapping results  (\#16 in Table \ref{table_acc_imgaug}). Landscape refers to the entire study area.}
+	\caption{Statistics of RTS terrain factors based on automatic mapping results  (\#22 in Table \ref{table_acc_imgaug}). Landscape refers to the entire study area.}
 	\label{fig_terrain_factors}
 \end{figure}
 
