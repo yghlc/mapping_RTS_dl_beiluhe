@@ -16,12 +16,12 @@ dir='/Users/huanglingcao/Dropbox/Research/Conference or written Paper/03 mapping
 #cp -p "${dir}"/top5_curves_trim.jpg .
 
 #cp -p "${dir}"/IoU_imgAug16_label_trim.jpg .
-#cp -p "${dir}"/IoU_imgAug22_label_trim.jpg .
+cp -p "${dir}"/IoU_imgAug22_label_trim.jpg .
 
 #cp -p "${dir}"/whole_area_mapped_trim.jpg .
 
 #cp -p "${dir}"/zoom_in_mapped_polygons_trim.jpg .
 
-cp -p "${dir}"/geometric_var_mapped_trim.jpg .
+#cp -p "${dir}"/geometric_var_mapped_trim.jpg .
 
 #cp -p "${dir}"/terrain_var_fig_mapped_trim.jpg .

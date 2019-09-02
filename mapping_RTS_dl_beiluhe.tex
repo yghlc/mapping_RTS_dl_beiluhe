@@ -287,9 +287,9 @@ The performance of each experiment, represented by precision-recall curves, vari
 \textbf{\#}&\textbf{Augmentation Methods}&\textbf{AP}&\textbf{Neg}&\textbf{Pos}&\textbf{IOU}&\textbf{TP}&\textbf{FP}&\textbf{FN}&\textbf{Pre}&\textbf{Rec}&\textbf{F1} \\
 \midrule 
 
-\multirow{3}{*}{0} &  \multirow{3}{*}{} & \multirow{3}{*}{0.527} & \multirow{3}{*}{1177} & \multirow{3}{*}{429} &0.8 & 166	&109	&97&	0.604  &	0.631 & 	0.617   \\ [-1ex]
- &  & &  &   & 0.4 & 233&	42	&27	&0.847  &	0.896   &	0.871   \\[-1ex]
- &  & &  &   & 0.0 & 234&	41	&2&	0.851  	&0.992  &0.916   \\[-1ex]
+\multirow{3}{*}{0} &  \multirow{3}{*}{} & \multirow{3}{*}{0.504} & \multirow{3}{*}{1177} & \multirow{3}{*}{429} &0.8 & 127   & 139   & 136   & 0.477  & 0.483  & 0.480   \\ [-1ex]
+ &  & &  &   & 0.4 & 224   & 42    & 36    & 0.842  & 0.862  & 0.881   \\[-1ex]
+ &  & &  &   & 0.0 & 225   & 41    & 7     & 0.846  & 0.970  & 0.904   \\[-1ex]
 
 \hline 
 \hline
@@ -388,11 +388,11 @@ so that the sum of TP and FN is not equal to the number of ground truths in some
 \subsection{Improvement due to data augmentation}
 \label{subsec_contrib_dataAug}
 
-A comparison between the experiments with and without data augmentation shows that including data augmentation can improve the IOU values of mapped polygons but introduce more false negatives. The F1 scores of experiment \#0 at IOU thresholds of 0 and 0.4 are close to those obtained in other experiments, and the difference between them is within 0.05. 
+A comparison between the experiments with and without data augmentation shows that including data augmentation can improve the IOU values of mapped polygons. \deleted{ but introduce more false positives.} The F1 scores of experiment \#0 at IOU thresholds of 0 and 0.4 are close to those obtained in other experiments, and the difference between them is within \replaced{0.08}{0.05}. 
 %The difference between them is smaller than 0.05. 
-However, when the IOU threshold is 0.8, the difference increases significantly to 0.17 (comparing \#0 and \#16). Moreover, all the experiments with data augmentation, except \#5 have higher F1 scores than \#0. Therefore, data augmentation increases the IOU values, namely, the mapped polygons better match the ground truths. Experiment \#5 is a particular case in point, since rotating produced more false negatives. 
+However, when the IOU threshold is 0.8, the difference increases significantly to \replaced{0.15}{0.17} (comparing \#0 and \#\replaced{26}{16}). Moreover, all the experiments with data augmentation, except \#5 \added{,\#9, and \#15} have higher F1 scores than \#0. \added{Moreover, a comparison between Fig. \ref{fig_iou_hist_exp16} and S14 shows that the number of mapped polygons with IOU values greater than 0.9 increases dramatically after applying data augmentation.} Therefore, data augmentation increases the IOU values, namely, the mapped polygons better match the ground truths. \replaced{Some of the experiments (i.e., \#5, \#9, and \#15) are}{Experiment \#5 is a} particular case\added{s} in point, since rotating produced more false negatives. 
 %As shown in Table \ref{table_acc_imgaug}, 
-Lastly, experiment \#0 has a relatively small number of false positives (17), which implies that the data augmentation also leads to more false positives. 
+\deleted{Lastly, experiment \#0 has a relatively small number of false positives (17), which implies that the data augmentation also leads to more false positives. }
 
 
 Different data augmentation methods may make different contributions to improving accuracies. Table \ref{table_stastic_imgaug} lists the statistics on the minimum, maximum, and average of F1 scores at different IOU thresholds when adopting different data augmentation methods. 
