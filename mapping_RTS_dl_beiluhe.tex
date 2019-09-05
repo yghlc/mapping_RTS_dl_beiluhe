@@ -385,6 +385,16 @@ so that the sum of TP and FN is not equal to the number of ground truths in some
 \end{figure}
 
 
+\subsection{Prediction in a new area}
+\label{subsec_newArea}
+% result on  a distinct geographic region
+
+\added{We used the trained model in experiment \#22 to predict RTSs in a totally new area regarding the training process and collecting training data. 
+The images were also Planet images acquired on May 22 and 23, 2018. 
+We used the same method described in section \ref{subsec_collect_groundtruth} to manually delineate RTSs in this area and obtained 50 RTS polygons.
+Validating against the RTS polygons, the mapping method delineated 62 mapped polygons, with the IOU threshold of 0.5, 33 and 20 of them are true and false positives, respectively.
+The number of false negatives is 17, indicating that 17 of the RTSs were missed by the mapping method. Therefore, the precision, recall, and F1 score are 0.53, 0.66, and 0.59.} 
+
 \subsection{Improvement due to data augmentation}
 \label{subsec_contrib_dataAug}
 
