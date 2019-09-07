@@ -178,7 +178,7 @@ RTSs are one of the typical \replaced{thaw-related}{ thermokarst} landforms in t
 \subsection{Collection and Pre-processing of Planet images}
 \label{subsec_collect_images}
 
-We downloaded Planet images via the Planet website (\url{www.planet.com}) through its Education and Research Program. We downloaded 64 PlanetScope scenes of images (as known as Daily Imagery). Each scene covers an area of around 10 km by 30 km and has four bands (blue, green, red, and near-infrared). The acquisition dates were  22 and 23 May 2018. The product level we chose was ``Analytic'', which means that the images had been orthorectified and \replaced{were}{ converted to} surface reflectance. Moreover, the bit depth and positional accuracy are 16 bit and higher than 10 m, respectively. %Planet also provides mosaic images but only available for commercial request. 
+We downloaded Planet images via the Planet website (\url{www.planet.com}) through its Education and Research Program. We downloaded 64 PlanetScope scenes of images (as known as Daily Imagery). Each scene covers an area of around 10 km by 30 km and has four bands (blue, green, red, and near-infrared). The acquisition dates were 22 and 23 May 2018. The product level we chose was ``Analytic'', which means that the images had been orthorectified and \replaced{were}{ converted to} surface reflectance. Moreover, the bit depth and positional accuracy are 16 bit and higher than 10 m, respectively. %Planet also provides mosaic images but only available for commercial request. 
 
 We pre-processed the Planet images according to the requirement of the deep learning algorithm and manual delineation. For the 64 scenes, we mosaicked and extracted red, blue, and green (RGB) bands using Geospatial Data Abstraction Library (GDAL, \url{gdal.org}), then stretched and sharpened the images using OpenCV (\url{opencv.org}). Since the deep learning algorithm (DeepLabv3+) used in this study only accepts three image bands as input, we conducted experiments to decide the best approach to extract three bands from Planet images. The candidate approaches include (1) extracting RGB bands since they are a natural color and will facilitate manual identification, (2) combining of normalized difference vegetation index (NDVI) \citep{rouse1974monitoring}, normalized difference water index (NDWI) \citep{mcfeeters1996use}, and the blue band (excluded when calculating NDVI and NDWI), and (3) adopting the first three \replaced{bands}{ components} after \added{applying} principal component analysis (PCA) \added{to the 4-band Planet images}. Because formation of RTSs results in an abrupt change of land cover in vegetation and soil moisture, \replaced{including}{ the combination of} NDVI and NDWI can help identify RTSs on images. PCA \replaced{uses an orthogonal transformation to re-organize}{ is a statistical procedure that re-organizes} the information in descending order \citep{wold1987principal}. \added{We used ``Orfeo Tool Box'' \citep{inglada2009orfeo} to conduct PCA transformation then only kept the first three bands.} By using PCA, we can keep the maximum amount of information on Planet images when \replaced{reducing 4-band images}{converting the original images} to \replaced{3-band images}{three bands}. 
 %We adopted the approach of extracting RGB bands for pre-processing because it achieved the highest accuracy (see section \ref{subsec_otherbands}).
@@ -189,7 +189,7 @@ We pre-processed the Planet images according to the requirement of the deep lear
 
 We manually delineated RTSs \added{inside the entire study area} on Planet images in QGIS (version 2.18.14, \url{qgis.org}) and conducted fieldwork to validate them. We divided the total study area into 1410 square grids using the vector-grid tool in QGIS. The size of each grid was 2.3 km$\times$2.3 km. RTSs in each grid were independently delineated by two researchers with extensive experience of mapping RTSs. 
 %Inconsistent result were decided with the third researcher. 
-The criteria for mapping RTSs were based on their distinct morphologic and tonal characteristics, including the presence of a headwall, slump floor or toe, the absence of vegetation, and the RTS shape. We cross-checked 90\% of the manual results by visiting them in the field in 2014 and 2018 and all of them by visual checking \added{on historical images} from Google Earth \added{and other satellites \citep{luo2019recent}}. Around 10\% of the RTSs were difficult to reach in the field. In total, we obtained \replaced{263}{202} polygons of RTSs as ground truths.  
+The criteria for mapping RTSs were based on their distinct morphologic and tonal characteristics, including the presence of a headwall, slump floor or toe, the absence of vegetation, and the RTS shape. We cross-checked \replaced{70}{90}\% of the manual results by visiting them in the field in 2014 and 2018 and all of them by visual checking \added{on historical images} from Google Earth \added{and other satellites \citep{luo2019recent}}. Around \replaced{30}{10}\% of the RTSs were difficult to reach in the field. In total, we obtained \replaced{263}{202} polygons of RTSs as ground truths.  
 
 \subsection{Automatic mapping of RTSs}
 \label{subsec_auto_mapping}
@@ -385,15 +385,33 @@ so that the sum of TP and FN is not equal to the number of ground truths in some
 \end{figure}
 
 
-\subsection{Prediction in a new area}
+\subsection{Prediction accuracies in a new area}
 \label{subsec_newArea}
-% result on  a distinct geographic region
+% result in a distinct geographic regions
+% Test accuracies in a new area?
 
-\added{We used the trained model in experiment \#22 to predict RTSs in a totally new area regarding the training process and collecting training data. 
-The images were also Planet images acquired on May 22 and 23, 2018. 
-We used the same method described in section \ref{subsec_collect_groundtruth} to manually delineate RTSs in this area and obtained 50 RTS polygons.
-Validating against the RTS polygons, the mapping method delineated 62 mapped polygons, with the IOU threshold of 0.5, 33 and 20 of them are true and false positives, respectively.
-The number of false negatives is 17, indicating that 17 of the RTSs were missed by the mapping method. Therefore, the precision, recall, and F1 score are 0.53, 0.66, and 0.59.} 
+\added{A test in a new area achieved good accuracies by using the trained model in experiment \#22. %regarding the training process and collecting training data. 
+The new area with a size of approximately 4000 km$^2$ is to the northwestern of our study area as shown in Fig S.15a in the supplementary materials. 
+This test area was chosen randomly because we did not know RTS distribution outside the Beiluhe region on the Tibetan Plateau.
+The image used for predicting RTSs is a mosaic of 47 Planet images acquired on 22 and 23 May 2018. 
+We used the same method described in section \ref{subsec_collect_groundtruth} to manually delineate RTSs in this area and obtained 50 RTS polygons (i.e., ground truths).
+As shown in Fig S.15b and S16, the mapping method delineated 62 mapped polygons. 
+Validating against the ground truths by setting the IOU threshold as 0.5 shows that 33 and 20 of them are true and false positives, respectively.
+The number of false negatives is 17, indicating that 17 of the RTSs are missed by the mapping method. 
+Therefore, the precision, recall, and F1 score are 0.532, 0.660, and 0.589, which shows a good performance of the mapping method in a new area.}
+
+\added{The accuracy in the test area is lower than the one in the study area.  
+All the experiments in Table \ref{table_acc_imgaug} and S1 show that the F1 score of mapped polygons in the study area is higher than the one in the test area by around 0.3. 
+%As presented in the Table 1, although the two areas have different extents and RTS number.  
+The boundaries of most mapped polygons match the ones of ground truths, but not as well as the case in the study area, as suggested by some true false positives in Fig. S16a and b. 
+Similar, their IOU values of mapped polygons (a histogram in Fig. S17) are not as high as the ones in the study area.
+Compared with the experiment results in the study area, both the percentage of false positives and false negatives are higher, leading to a low F1 score. 
+The reason for the lower F1 score in the test area is that some of RTSs or land cover with different appearance were not included in the training data. %the image is different as well.
+For example, Fig. S16c shows two false negatives which are darker than most RTSs in the study area on Planet images. 
+Fig. S16a, and d show examples of false positives which have similar appearances of RTSs in the study area. 
+Fig. S16e is a case that the mapping method only picked a portion of an RTS, indicating that the features of this RTS is not well learned by the trained model.}
+
+mark a line here 
 
 \subsection{Improvement due to data augmentation}
 \label{subsec_contrib_dataAug}
