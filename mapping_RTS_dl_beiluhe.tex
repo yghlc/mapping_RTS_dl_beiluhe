@@ -404,14 +404,14 @@ Therefore, the precision, recall, and F1 score are 0.532, 0.660, and 0.589, whic
 All the experiments in Table \ref{table_acc_imgaug} and S1 show that the F1 score of mapped polygons in the study area is higher than the one in the test area by around 0.3. 
 %As presented in the Table 1, although the two areas have different extents and RTS number.  
 The boundaries of most mapped polygons match the ones of ground truths, but not as well as the case in the study area, as suggested by some true false positives in Fig. S16a and b. 
-Similar, their IOU values of mapped polygons (a histogram in Fig. S17) are not as high as the ones in the study area.
-Compared with the experiment results in the study area, both the percentage of false positives and false negatives are higher, leading to a low F1 score. 
-The reason for the lower F1 score in the test area is that some of RTSs or land cover with different appearance were not included in the training data. %the image is different as well.
+Similar, their IOU values (a histogram in Fig. S17) are not as high as the ones in the study area.
+Compared with the experiment results in the study area, both the percentage of false positives and false negatives are higher, leading to a lower F1 score. 
+The reason for the lower F1 score in the test area is that some of RTSs or land cover with different appearance on images were not included in the training data. %the image is different as well.
 For example, Fig. S16c shows two false negatives which are darker than most RTSs in the study area on Planet images. 
 Fig. S16a, and d show examples of false positives which have similar appearances of RTSs in the study area. 
 Fig. S16e is a case that the mapping method only picked a portion of an RTS, indicating that the features of this RTS is not well learned by the trained model.}
 
-mark a line here 
+%mark a line here 
 
 \subsection{Improvement due to data augmentation}
 \label{subsec_contrib_dataAug}
