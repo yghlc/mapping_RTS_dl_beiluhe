@@ -391,7 +391,7 @@ so that the sum of TP and FN is not equal to the number of ground truths in some
 % Test accuracies in a new area?
 
 \added{A test in a new area achieved good accuracies by using the trained model in experiment \#22. %regarding the training process and collecting training data. 
-The new area with a size of approximately 4000 km$^2$ is to the northwestern of our study area as shown in Fig S.15a in the supplementary materials. 
+The new area with a size of approximately 4000 km$^2$ is to the northwestern of our study area, as shown in Fig S.15a in the supplementary materials. 
 This test area was chosen randomly because we did not know RTS distribution outside the Beiluhe region on the Tibetan Plateau.
 The image used for predicting RTSs is a mosaic of 47 Planet images acquired on 22 and 23 May 2018. 
 We used the same method described in section \ref{subsec_collect_groundtruth} to manually delineate RTSs in this area and obtained 50 RTS polygons (i.e., ground truths).
@@ -404,14 +404,16 @@ Therefore, the precision, recall, and F1 score are 0.532, 0.660, and 0.589, whic
 All the experiments in Table \ref{table_acc_imgaug} and S1 show that the F1 score of mapped polygons in the study area is higher than the one in the test area by around 0.3. 
 %As presented in the Table 1, although the two areas have different extents and RTS number.  
 The boundaries of most mapped polygons match the ones of ground truths, but not as well as the case in the study area, as suggested by some true false positives in Fig. S16a and b. 
-Similar, their IOU values (a histogram in Fig. S17) are not as high as the ones in the study area.
+Similarly, their IOU values (a histogram in Fig. S17) are not as high as the ones in the study area.
 Compared with the experiment results in the study area, both the percentage of false positives and false negatives are higher, leading to a lower F1 score. 
-The reason for the lower F1 score in the test area is that some of RTSs or land cover with different appearance on images were not included in the training data. %the image is different as well.
+The reason for the lower F1 score in the test area is that some of RTSs or land cover with a different appearance on images were not included in the training data. %the image is different as well.
 For example, Fig. S16c shows two false negatives which are darker than most RTSs in the study area on Planet images. 
 Fig. S16a, and d show examples of false positives which have similar appearances of RTSs in the study area. 
-Fig. S16e is a case that the mapping method only picked a portion of an RTS, indicating that the features of this RTS is not well learned by the trained model.}
+Fig. S16e is a case that the mapping method only picked a portion of an RTS, indicating that the features of this RTS are not well learned by the trained model.}
 
 %mark a line here 
+%We only conduct one experiment in the test areas because others expeirment would be similar. 
+
 
 \subsection{Improvement due to data augmentation}
 \label{subsec_contrib_dataAug}
@@ -672,7 +674,9 @@ Codes will be made available to the public on Github (\url{https://github.com/yg
 \section{Acknowledgments}
 \label{sec_acknowledgments}
 
-We would like to thank Planet’s Education and Research Program, through which we obtained Planet CubeSat Images for this study. We acknowledge the support of NVIDIA Corporation with the donation of a Quadro P5000 GPU used for this research, the Hong Kong Research Grants Council (CUHK14300815), and CUHK Direct Grant for Research (4053282). Lingcao Huang was supported by the CUHK Global Scholarship Programme for Research Excellence when he visited the University of Alberta and conducted this research.
+\added{Great thanks to editor Joseph Awange for handling this paper and three anonymous reviewers for their constructive suggestions and insightful comments.}
+We would like to thank Planet’s Education and Research Program, through which we obtained Planet CubeSat Images for this study. We acknowledge the support of NVIDIA Corporation with the donation of a Quadro P5000 GPU used for this research, the Hong Kong Research Grants Council (CUHK14300815), and CUHK Direct Grant for Research (4053282). Lingcao Huang was supported by the CUHK Global Scholarship Programme for Research Excellence when he visited the University of Alberta and conducted this research. 
+\added{And also thanks Professor Thian Yew Gan for hosting Lingcao Huang's visit to Canada and discussion on the results.}
 
 
 
