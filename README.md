@@ -1,5 +1,5 @@
 # mapping_RTS_dl_beiluhe
-Letex project for the manuscript:
+Latex project for the manuscript:
 
 ```
 @article{huang2019using,
